@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: nginx-virtual-service
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - nginx-internal-gateway
+  - mesh
+  http:
+  - retries:
+      attempts: 10
+    route:
+    - destination:
+        host: nginx-service
+        subset: v1
