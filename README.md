@@ -119,7 +119,7 @@ kpt cfg set asm gcloud.project.environProjectNumber ${ENVIRON_PROJECT_NUMBER}
 kpt cfg set asm anthos.servicemesh.profile asm-gcp
 ```
 
-### ASM インストール w/ Internal LB
+### ASM インストール w/ Multiple Ingress Gateway
 
 ```bash
 git clone https://github.com/kkuchima/asm-multi-ingressgw
