@@ -1,5 +1,5 @@
 # Anthos Service Mesh w/ Multiple Ingress Gateways
-  ASM で複数の istio-ingressgateway をデプロイした時の雑なメモ
+  ASM で複数の istio-ingressgateway をデプロイした時のメモ
 
 オフィシャルの ASM インストール手順はこちら：  
 https://cloud.google.com/service-mesh/docs/install  
@@ -13,7 +13,7 @@ export GCP_EMAIL_ADDRESS=$(gcloud auth list --filter=status:ACTIVE \
   --format="value(account)")
 export PROJECT_ID=$(gcloud config list --format   "value(core.project)")
 export PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID}   --format="value(projectNumber)")
-export CLUSTER_NAME=ilb-kuchima
+export CLUSTER_NAME=multi-gw
 export CLUSTER_LOCATION=asia-southeast1-a
 export CLUSTER_REGION=asia-southeast1
 export WORKLOAD_POOL=${PROJECT_ID}.svc.id.goog
